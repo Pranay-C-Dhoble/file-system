@@ -19,18 +19,28 @@ public class DataReader {
             }
             System.out.println("Total Homes: " + homes.size());
 
-            List<Home> homes2bhk = homes.stream().filter(home -> home.getBedrooms()== 2).toList();
-            dataWrite(homes2bhk, "src/main/resources/Data/2bhk.csv");
+            List<Home> homes2bhk = getBedrooms(homes, 2);
+            dataWrite(homes2bhk, generatePath(2));
 
-            List<Home> homes3bhk = homes.stream().filter(home -> home.getBedrooms()== 3).toList();
-            dataWrite(homes3bhk, "src/main/resources/Data/3bhk.csv");
+            List<Home> homes3bhk = getBedrooms(homes, 3);
+            dataWrite(homes3bhk, generatePath(3));
 
-            List<Home> homes4bhk = homes.stream().filter(home -> home.getBedrooms()== 4).toList();
-            dataWrite(homes4bhk, "src/main/resources/Data/4bhk.csv");
+            List<Home> homes4bhk = getBedrooms(homes, 4);
+            dataWrite(homes4bhk, generatePath(4));
 
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+    }
+
+    private static String generatePath(int count) {
+        return "src/main/resources/Data/" + count + "bhk.csv";
+    }
+
+    private static List<Home> getBedrooms(List<Home> homes, int count) {
+        List<Home> homes4bhk = homes.stream()
+                .filter(home -> home.getBedrooms()== count).toList();
+        return homes4bhk;
     }
 
     private static void dataWrite(List<Home> location , String path) {
