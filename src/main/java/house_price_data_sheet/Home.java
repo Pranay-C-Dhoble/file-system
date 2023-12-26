@@ -13,4 +13,5 @@ public class Home {
     private String neighbourhood;
     private int year;
     private double price;
+
 }
