@@ -19,6 +19,9 @@ public class DataReader {
             }
             System.out.println("Total Homes: " + homes.size());
 
+            // List<House> houses2bhk = houses.stream().filter(house -> house.bedrooms == 2).collect(Collectors.toList());
+            // dataWrite(houses2bhk);
+
             List<Home> homes2bhk = getBedrooms(homes, 2);
             dataWrite(homes2bhk, generatePath(2));
 
@@ -38,9 +41,8 @@ public class DataReader {
     }
 
     private static List<Home> getBedrooms(List<Home> homes, int count) {
-        List<Home> homes4bhk = homes.stream()
-                .filter(home -> home.getBedrooms()== count).toList();
-        return homes4bhk;
+        List<Home> dataofrooms = homes.stream().filter(home -> home.getBedrooms()== count).toList();
+        return dataofrooms;
     }
 
     private static void dataWrite(List<Home> location , String path) {
