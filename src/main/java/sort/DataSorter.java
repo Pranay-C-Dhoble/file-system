@@ -37,11 +37,12 @@ public class DataSorter {
         fruitlList.add(Fruit.builder().quantity(3).name("Orange").description("Good").build());
         fruitlList.add(Fruit.builder().quantity(2).name("Banana").description("Good").build());
         fruitlList.add(Fruit.builder().quantity(4).name("Grapes").description("Good").build());
-        System.out.println("-----------------------Before sorting-----------------------------------");
+        System.out.println("-----------------------Before sorting-----------------------------------\n");
         print(fruitlList);
         Collections.sort(fruitlList);
-        System.out.println("-----------------------After sorting------------------------------------");
+        System.out.println("-----------------------After sorting------------------------------------\n");
         print(fruitlList);
+        System.out.println("");
 
         Collections.sort(fruitlList, new Comparator<Fruit>() {
             @Override
@@ -56,10 +57,10 @@ public class DataSorter {
                 return o1.getQuantity() - o2.getQuantity();
             }//here we are sorting the list of fruits based on the quantity of the fruit
         });
-        System.out.println("-----------------------After sorting------------------------------------");
+        System.out.println("-----------------------After sorting------------------------------------\n");
         print(fruitlList);
     }
-    
+
     private static void print(Object[] fruit) {
         for (Object o: fruit) {
             System.out.println(o);
