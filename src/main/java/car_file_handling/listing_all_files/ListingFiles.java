@@ -6,6 +6,7 @@ import car_file_handling.car_csv_writer.CarCsvWriter;
 import car_file_handling.car_csv_writer.CarFileWriter;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 public class ListingFiles {
@@ -22,6 +23,7 @@ public class ListingFiles {
                 System.out.println(fileName);
                 CarDataReader carDataReader = new CarCsvReader(fileName);
                 List data = carDataReader.read();
+                Collections.sort(data);//Collections.sort() method is used to sort the elements present in the specified list of Collection in ascending order.
                 CarFileWriter carFileWriter = new CarCsvWriter();
                 carFileWriter.write(data, "src/main/resources/AllCarData.csv");
             }

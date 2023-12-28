@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
-public class Car {
+public class Car implements Comparable{
     private String model;
     private int year;
     private long price;
@@ -27,5 +27,11 @@ public class Car {
                 "," + tax +
                 "," + mpg +
                 "," + engineSize;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Car car = (Car) o;
+        return this.transmission.compareTo(car.transmission);
     }
 }
