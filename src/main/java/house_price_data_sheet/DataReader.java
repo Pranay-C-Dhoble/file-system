@@ -41,8 +41,8 @@ public class DataReader {
     }
 
     private static List<Home> getBedrooms(List<Home> homes, int count) {
-        List<Home> dataofrooms = homes.stream().filter(home -> home.getBedrooms()== count).toList();
-        return dataofrooms;
+        List<Home> dataOfRooms = homes.stream().filter(home -> home.getBedrooms()== count).toList();
+        return dataOfRooms;
     }
 
     private static void dataWrite(List<Home> location , String path) {
