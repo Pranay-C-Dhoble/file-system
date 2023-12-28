@@ -7,7 +7,7 @@ import lombok.ToString;
 @Data
 @Builder
 @ToString
-public class House {
+public class House implements Comparable{
     private int squareFeet;
     private int bedrooms;
     private int bathrooms;
@@ -23,5 +23,11 @@ public class House {
                 "," + neighbourhood +
                 "," + year +
                 "," + price;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        House house = (House) o;
+        return this.neighbourhood.compareTo(house.neighbourhood);
     }
 }

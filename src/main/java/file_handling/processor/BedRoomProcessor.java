@@ -7,8 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BedRoomProcessor {
-    public List<House> getHouses(List<House> houses, int bedroomSize) {
-        List<House> bhkList = houses.stream().filter(h -> h.getBedrooms() == bedroomSize).collect(Collectors.toList());
-        return bhkList;
+    public static List<House> getHouses(List<House> list, int bedroomSize) {
+        return list.stream().filter(h -> h.getBedrooms() == bedroomSize).collect(Collectors.toList());
     }
 }
