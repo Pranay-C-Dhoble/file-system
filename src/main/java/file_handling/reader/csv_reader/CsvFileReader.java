@@ -20,8 +20,8 @@ public class CsvFileReader implements FileReader {
             String line = reader.readLine();
             List<House> house = new ArrayList<>();
             while ((line = reader.readLine()) != null){
-                House huse = buildHome(line);
-                house.add(huse);
+                House h = buildHome(line);
+                house.add(h);
             }
             return house;
 
