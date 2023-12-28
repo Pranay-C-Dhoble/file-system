@@ -1,10 +1,7 @@
 package sort;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class DataSorter {
     public static void main(String[] args) {
@@ -45,11 +42,24 @@ public class DataSorter {
         Collections.sort(fruitlList);
         System.out.println("-----------------------After sorting------------------------------------");
         print(fruitlList);
+
+        Collections.sort(fruitlList, new Comparator<Fruit>() {
+            @Override
+            public int compare(Fruit o1, Fruit o2) {
+                return o1.getName().compareTo(o2.getName());
+            } //here we are sorting the list of fruits based on the name of the fruit
+        });
+
+        Collections.sort(fruitlList, new Comparator<Fruit>() {
+            @Override
+            public int compare(Fruit o1, Fruit o2) {
+                return o1.getQuantity() - o2.getQuantity();
+            }//here we are sorting the list of fruits based on the quantity of the fruit
+        });
+        System.out.println("-----------------------After sorting------------------------------------");
+        print(fruitlList);
     }
-
-
-
-
+    
     private static void print(Object[] fruit) {
         for (Object o: fruit) {
             System.out.println(o);
