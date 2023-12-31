@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class ComparePrice {
-    public static double comparePrice(List data) {
+    public static double getHighestPrice(List data) {
         BigDecimal maxPrice = new BigDecimal(0);
         for(Object d : data){
             String[] data2 = d.toString().split(",");
@@ -17,4 +17,8 @@ public class ComparePrice {
         System.out.println(maxPrice);
         return maxPrice.doubleValue();
     }
+
+//    public static double getLowestPrice(List data){
+//        return 0.0;
+//    }
 }

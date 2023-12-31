@@ -1,12 +1,11 @@
 package house_price_data_sheet;
 
-
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class Home {
+public class Home implements Comparable {
     private int squareFeet;
     private int bedrooms;
     private int bathrooms;
@@ -14,4 +13,9 @@ public class Home {
     private int year;
     private double price;
 
+
+    public int compareTo(Object o) {
+        Home home = (Home) o;
+        return this.neighbourhood.compareTo(home.neighbourhood);
+    }
 }

@@ -2,6 +2,7 @@ package house_price_data_sheet;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class DataReader {
@@ -18,7 +19,8 @@ public class DataReader {
                 homes.add(home);
             }
             System.out.println("Total Homes: " + homes.size());
-
+            List data = homes;
+            Collections.sort(data);
             // List<House> houses2bhk = houses.stream().filter(house -> house.bedrooms == 2).collect(Collectors.toList());
             // dataWrite(houses2bhk);
 
