@@ -3,9 +3,9 @@ package file_handling;
 import file_handling.reader.csv_reader.CsvFileReader;
 import file_handling.processor.BedRoomProcessor;
 import file_handling.reader.FileReader;
-import file_handling.writer.csv_writer.CsvFileWriter;
+import file_handling.writer.csvwriter.CsvFileWriter;
 import file_handling.writer.IFileWriter;
-import file_handling.writer.json_write.JsonFileWriter;
+import file_handling.writer.jsonwrite.JsonFileWriter;
 
 import java.util.Collections;
 import java.util.List;

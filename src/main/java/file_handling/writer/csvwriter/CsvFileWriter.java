@@ -1,4 +1,4 @@
-package file_handling.writer.csv_writer;
+package file_handling.writer.csvwriter;
 
 import file_handling.writer.IFileWriter;
 

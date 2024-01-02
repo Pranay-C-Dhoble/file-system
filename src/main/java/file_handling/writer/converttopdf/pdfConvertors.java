@@ -1,4 +1,4 @@
-package file_handling.writer.convert_to_pdf;
+package file_handling.writer.converttopdf;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.BaseFont;

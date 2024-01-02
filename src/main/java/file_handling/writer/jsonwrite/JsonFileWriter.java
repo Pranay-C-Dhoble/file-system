@@ -1,4 +1,4 @@
-package file_handling.writer.json_write;
+package file_handling.writer.jsonwrite;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import file_handling.writer.IFileWriter;
