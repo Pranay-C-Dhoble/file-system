@@ -1,4 +1,4 @@
-package file_handling.model;
+package filehandling.model;
 
 import lombok.Builder;
 import lombok.Data;

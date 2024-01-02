@@ -1,7 +1,7 @@
-package file_handling.writer.jsonwrite;
+package filehandling.writer.jsonwrite;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import file_handling.writer.IFileWriter;
+import filehandling.writer.IFileWriter;
 
 import java.io.FileWriter;
 import java.util.List;

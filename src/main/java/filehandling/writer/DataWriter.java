@@ -1,4 +1,4 @@
-package file_handling.writer;
+package filehandling.writer;
 
 import java.util.List;
 

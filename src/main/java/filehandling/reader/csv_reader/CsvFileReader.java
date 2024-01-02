@@ -1,7 +1,7 @@
-package file_handling.reader.csv_reader;
+package filehandling.reader.csv_reader;
 
-import file_handling.model.House;
-import file_handling.reader.FileReader;
+import filehandling.model.House;
+import filehandling.reader.FileReader;
 
 import java.io.BufferedReader;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package file_handling.compare;
+package filehandling.compare;
 
 import java.math.BigDecimal;
 import java.util.List;

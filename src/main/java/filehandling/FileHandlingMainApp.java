@@ -1,11 +1,11 @@
-package file_handling;
+package filehandling;
 
-import file_handling.reader.csv_reader.CsvFileReader;
-import file_handling.processor.BedRoomProcessor;
-import file_handling.reader.FileReader;
-import file_handling.writer.csvwriter.CsvFileWriter;
-import file_handling.writer.IFileWriter;
-import file_handling.writer.jsonwrite.JsonFileWriter;
+import filehandling.reader.csv_reader.CsvFileReader;
+import filehandling.processor.BedRoomProcessor;
+import filehandling.reader.FileReader;
+import filehandling.writer.csvwriter.CsvFileWriter;
+import filehandling.writer.IFileWriter;
+import filehandling.writer.jsonwrite.JsonFileWriter;
 
 import java.util.Collections;
 import java.util.List;

@@ -1,6 +1,6 @@
-package file_handling.writer.csvwriter;
+package filehandling.writer.csvwriter;
 
-import file_handling.writer.IFileWriter;
+import filehandling.writer.IFileWriter;
 
 import java.io.File;
 import java.io.FileWriter;

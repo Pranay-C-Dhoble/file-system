@@ -1,9 +1,9 @@
-package file_handling;
+package filehandling;
 
-import file_handling.compare.ComparePrice;
-import file_handling.processor.BedRoomProcessor;
-import file_handling.reader.FileReader;
-import file_handling.reader.csv_reader.CsvFileReader;
+import filehandling.compare.ComparePrice;
+import filehandling.processor.BedRoomProcessor;
+import filehandling.reader.FileReader;
+import filehandling.reader.csv_reader.CsvFileReader;
 
 import java.util.List;
 

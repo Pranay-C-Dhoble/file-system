@@ -1,6 +1,4 @@
-package file_handling.reader;
-
-import file_handling.reader.DataReader;
+package filehandling.reader;
 
 public interface FileReader extends DataReader {
     //marker interface

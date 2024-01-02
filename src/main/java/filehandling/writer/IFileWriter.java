@@ -1,4 +1,4 @@
-package file_handling.writer;
+package filehandling.writer;
 
 public interface IFileWriter extends DataWriter {
 }

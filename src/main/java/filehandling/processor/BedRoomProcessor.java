@@ -1,8 +1,7 @@
-package file_handling.processor;
+package filehandling.processor;
 
-import file_handling.model.House;
+import filehandling.model.House;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 

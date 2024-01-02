@@ -1,4 +1,4 @@
-package file_handling.reader;
+package filehandling.reader;
 
 import java.util.List;
 
