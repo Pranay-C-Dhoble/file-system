@@ -41,6 +41,7 @@ public class ListingFiles {
 
         CarDataReader carDataReader = new CarCsvReader(fileName);
         List data = carDataReader.read();
+        Collections.sort(data);// Sort the data
         allDataList.addAll(data); // Add data from the current file to the cumulative list
     }
 
