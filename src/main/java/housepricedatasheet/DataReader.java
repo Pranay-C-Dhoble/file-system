@@ -1,4 +1,4 @@
-package house_price_data_sheet;
+package housepricedatasheet;
 
 import java.io.*;
 import java.util.ArrayList;
