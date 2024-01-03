@@ -3,6 +3,7 @@ package filehandling;
 import filehandling.reader.csv_reader.CsvFileReader;
 import filehandling.processor.BedRoomProcessor;
 import filehandling.reader.FileReader;
+import filehandling.util.PathGenerator;
 import filehandling.writer.converttopdf.PdfConverter;
 import filehandling.writer.csvwriter.CsvFileWriter;
 import filehandling.writer.IFileWriter;
@@ -19,23 +20,24 @@ public class FileHandlingMainApp {
         IFileWriter fileWriter = new CsvFileWriter();
         IFileWriter jsonFileWriter = new JsonFileWriter();
         PdfConverter pdfConverter = new PdfConverter();
+        PathGenerator pathGenerator = new PathGenerator();
 
         List data = fileReader.read();
         Collections.sort(data); //Collections.sort() method is used to sort the elements present in the specified list of Collection in ascending order.
 
-        fileWriter.write(bedRoomProcessor.getHouses(data, 2), "src/main/resources/Data/2bhk.csv");
-        fileWriter.write(bedRoomProcessor.getHouses(data, 3), "src/main/resources/Data/3bhk.csv");
-        fileWriter.write(bedRoomProcessor.getHouses(data, 4), "src/main/resources/Data/4bhk.csv");
-        fileWriter.write(bedRoomProcessor.getHouses(data, 5), "src/main/resources/Data/5bhk.csv");
+        fileWriter.write(bedRoomProcessor.getHouses(data, 2), pathGenerator.getPath(2, "csv"));
+        fileWriter.write(bedRoomProcessor.getHouses(data, 3), pathGenerator.getPath(3, "csv"));
+        fileWriter.write(bedRoomProcessor.getHouses(data, 4), pathGenerator.getPath(4, "csv"));
+        fileWriter.write(bedRoomProcessor.getHouses(data, 5), pathGenerator.getPath(5, "csv"));
 
-        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 2), "src/main/resources/Data/2bhk.json");
-        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 3), "src/main/resources/Data/3bhk.json");
-        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 4), "src/main/resources/Data/4bhk.json");
-        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 5), "src/main/resources/Data/5bhk.json");
+        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 2), pathGenerator.getPath(2, "json"));
+        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 3), pathGenerator.getPath(3, "json"));
+        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 4), pathGenerator.getPath(4, "json"));
+        jsonFileWriter.write(bedRoomProcessor.getHouses(data, 5), pathGenerator.getPath(5, "json"));
 
-        pdfConverter.write(bedRoomProcessor.getHouses(data, 2), "src/main/resources/Data/2bhk.pdf");
-        pdfConverter.write(bedRoomProcessor.getHouses(data, 3), "src/main/resources/Data/3bhk.pdf");
-        pdfConverter.write(bedRoomProcessor.getHouses(data, 4), "src/main/resources/Data/4bhk.pdf");
-        pdfConverter.write(bedRoomProcessor.getHouses(data, 5), "src/main/resources/Data/5bhk.pdf");
+        pdfConverter.write(bedRoomProcessor.getHouses(data, 2), pathGenerator.getPath(2, "pdf"));
+        pdfConverter.write(bedRoomProcessor.getHouses(data, 3), pathGenerator.getPath(3, "pdf"));
+        pdfConverter.write(bedRoomProcessor.getHouses(data, 4), pathGenerator.getPath(4, "pdf"));
+        pdfConverter.write(bedRoomProcessor.getHouses(data, 5), pathGenerator.getPath(5, "pdf"));
     }
 }
