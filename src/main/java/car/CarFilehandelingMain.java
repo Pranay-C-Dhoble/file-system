@@ -1,4 +1,5 @@
 package car;
+import car.duplicate.DuplicateRecord;
 import car.file.ListingFiles;
 import car.file.writer.CarCsvWriter;
 import car.file.writer.CarFileWriter;
@@ -12,6 +13,8 @@ public class CarFilehandelingMain {
         carFileWriter.write(ex1.getAllDataList(), "src/main/resources/AllCarData.csv");
         CarJsonWriter carJsonWriter = new CarJsonWriter();
         carJsonWriter.write(ex1.getAllDataList(), "src/main/resources/AllCarData.json");
+//        DuplicateRecord duplicateRecord = new DuplicateRecord();
+//        duplicateRecord.findDuplicates(ex1.getAllDataList());
     }
 }
 
