@@ -11,6 +11,8 @@ public class JsonFileWriter implements IFileWriter {
 
     @Override
     public void write(List data, String outputPath) {
+        System.out.println("Size Of ArrayList is : " + data.size() +"---->"+ outputPath);
+        System.out.println("Writing to JSON file");
         try{
             String jsonString = objectMapper.writeValueAsString(data);
             FileWriter fileWriter = new FileWriter(outputPath);

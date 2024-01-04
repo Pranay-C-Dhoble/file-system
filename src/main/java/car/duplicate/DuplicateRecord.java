@@ -2,20 +2,27 @@ package car.duplicate;
 
 import car.model.Car;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class DuplicateRecord {
-    public void findDuplicates(List<Car> cars) {
-        System.out.println("Finding duplicate records");
-        for (int i = 0; i < cars.size(); i++) {
-            int count = 0;
-            for (int j = i + 1; j < cars.size(); j++) {
-                if (cars.get(i).equals(cars.get(j))) {
-                    count++;
-                }
-            }
-            if (count > 7) {
-                System.out.println(cars.get(i) + " is duplicate");
+    public void duplicateCars(List data) {
+        System.out.println("----------------------------------------------------------");
+        System.out.println(" Duplicate Records Finder Started ............");
+        System.out.println(" Size of ArrayList : " + data.size());
+        HashMap<Car, Integer> countMap = new HashMap<>();
+
+        for(Object car : data) {
+            countMap.put((Car) car, countMap.getOrDefault(car, 0) + 1);
+        }
+        System.out.println(" Size Of HashMap : " + countMap.size());
+
+        System.out.println(" Count of duplicates:");
+        System.out.println("-----------------------Duplicate Cars-----------------------");
+        for (Car key : countMap.keySet()) {
+            int count = countMap.get(key);
+            if (count > 1) {
+                System.out.println(key + " -----> " + count);
             }
         }
     }

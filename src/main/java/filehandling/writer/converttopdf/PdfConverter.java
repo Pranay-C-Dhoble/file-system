@@ -13,7 +13,8 @@ import java.util.List;
 public class PdfConverter implements IFileWriter {
     @Override
     public void write(List data, String outputPath) {
-        System.out.println(data.size() +" "+ outputPath);
+        System.out.println("Size Of ArrayList is : " + data.size() +"---->"+ outputPath);
+        System.out.println("Writing to PDF file");
         Document pdfDoc =  new Document();
         try{
             PdfWriter pdfWriter = PdfWriter.getInstance(pdfDoc,new FileOutputStream(outputPath));

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CsvFileWriter implements IFileWriter {
     public void write(List data, String outputPath) {
-        System.out.println(data.size() +" "+ outputPath);
+        System.out.println("Size Of ArrayList is : " + data.size() +"---->"+ outputPath);
         System.out.println("Writing to CSV file");
         try {
             File file = new File(outputPath);
