@@ -2,7 +2,11 @@ package filehandling;
 
 import filehandling.compare.ComparePrice;
 import filehandling.compare.PrintPrice;
+import filehandling.duplicatebhk.DuplicateFIndex;
 import filehandling.duplicatebhk.DuplicateFinder;
+import filehandling.metrics.BedRoomMetrics;
+import filehandling.metrics.BedRoomNeighbourhoodMatric;
+import filehandling.metrics.NeighbourhoodMetrics;
 import filehandling.reader.csv_reader.CsvFileReader;
 import filehandling.processor.BedRoomProcessor;
 import filehandling.reader.FileReader;
@@ -28,6 +32,8 @@ public class FileHandlingMainApp {
 
         List data = fileReader.read();
 
+        DuplicateFIndex.findDuplicate(data);
+
         duplicateFinder.duplicateApartment(data);
 
         Collections.sort(data); //Collections.sort() method is used to sort the elements present in the specified list of Collection in ascending order.
@@ -46,6 +52,13 @@ public class FileHandlingMainApp {
         PrintPrice printPrice = new PrintPrice();
         printPrice.highestPrice(data);
 
-
+        BedRoomMetrics bedRoomMetrics = new BedRoomMetrics();
+        bedRoomMetrics.collect(data);
+        System.out.println("---------------------------------------------------------------------");
+        NeighbourhoodMetrics neighbourhoodMetrics = new NeighbourhoodMetrics();
+        neighbourhoodMetrics.collect(data);
+        System.out.println("---------------------------------------------------------------------");
+        BedRoomNeighbourhoodMatric bedRoomNeighbourhoodMatric = new BedRoomNeighbourhoodMatric();
+        bedRoomNeighbourhoodMatric.collect(data);
     }
 }
