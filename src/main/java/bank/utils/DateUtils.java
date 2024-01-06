@@ -9,7 +9,7 @@ import java.util.Date;
 public class DateUtils {
     public static Date convertToDate(String dateStr) throws Exception {
 
-        System.out.println("Input: " + dateStr);
+//        System.out.println("Input: " + dateStr);
         if(StringUtils.isEmpty(dateStr) || StringUtils.containsIgnoreCase(dateStr, "nan")){
             throw new InvalidDataException("Date is invalid!");
         }
@@ -20,8 +20,8 @@ public class DateUtils {
         return date;
     }
 
-    public static void main(String[] args) throws Exception{
-        String d = "31/03/97 12:12:12"; // mm/dd/yy
-        convertToDate(d);
-    }
+//    public static void main(String[] args) throws Exception{
+//        String d = "31/03/97 12:12:12"; // mm/dd/yy
+//        convertToDate(d);
+//    }
 }
