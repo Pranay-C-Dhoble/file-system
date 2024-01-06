@@ -15,6 +15,7 @@ public class TransactionByGenderMatrics implements MatricsCollector{
         System.out.println("Transactions done by Male: " + genderGroups.get('M').size());
         System.out.println("Transactions done by Female: " + genderGroups.get('F').size());
         System.out.println("Transactions done by Not Specified: " + genderGroups.get('N').size());
+        System.out.println("Transaction done by Transgender: " + genderGroups.get('T').size());
 
     }
 }
