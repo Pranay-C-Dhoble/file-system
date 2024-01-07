@@ -36,3 +36,14 @@ build/
 
 ### Mac OS ###
 .DS_Store
+src/main/resources/Bank_Clean_data/bank_clean_transactions.csv
+src/main/resources/Bank_Clean_Data_Output/T1.csv
+src/main/resources/Bank_Clean_Data_Output/T553375.csv
+src/main/resources/Bank_Clean_Data_Output/T603545.csv
+src/main/resources/Bank_Clean_Data_Output/T653733.csv
+src/main/resources/Bank_Clean_Data_Output/T703912.csv
+src/main/resources/Bank_Clean_Data_Output/T754028.csv
+src/main/resources/Bank_Clean_Data_Output/T804216.csv
+src/main/resources/Bank_Clean_Data_Output/T854357.csv
+src/main/resources/Bank_Clean_Data_Output/T904522.csv
+src/main/resources/Bank_Clean_Data_Output/T954670.csv
