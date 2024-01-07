@@ -12,7 +12,7 @@ import java.util.List;
 
 public class FileSpliterUtils {
     public static void main(String[] args){
-        split("src/main/resources/Bank/bank_transactions.csv", 50000, "src/main/resources/Bank_Output/");
+        split("src/main/resources/Bank_Clean_data/bank_clean_transactions.csv", 50000, "src/main/resources/Bank_Clean_Data_Output/");
     }
 
     public static void split(String inputpath, int partationCount, String outputpath){
